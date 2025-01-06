@@ -3,6 +3,7 @@ package com.example.intentapp;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -29,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         makeCallButton.setOnClickListener(v -> {
+            Log.d("MainActivity", "makecall button clicked");
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
-            callIntent.setData(Uri.parse("call:0584390627"));
+            callIntent.setData(Uri.parse("tel:0584390627"));
+            startActivity(callIntent);
         });
 
         shareTextButton.setOnClickListener(v -> {
