@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button shareTextButton = findViewById(R.id.shareTextButton);
 
         openBrowserButton.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("//www.dana.com"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.dana.com"));
             startActivity(browserIntent);
         });
 
